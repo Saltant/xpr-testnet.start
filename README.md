@@ -69,7 +69,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 - Edit config.ini:  
   - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:OPENED_PORT`
   - > ⚠️ **IMPORTANT!** Please pay attention!
-In order for your node to synchronize successfully and fastest with the blockchain, you need P2P nodes sorted by latency relative to your server, for this purpose use the [get_p2p_nodes.sh](xprNode/get_p2p_nodes.sh) script by making it executable `chown +x /opt/XPRTestNet/xprNode/get_p2p_nodes.sh` then run it `opt/XPRTestNet/xprNode/get_p2p_nodes.sh`.
+In order for your node to synchronize successfully and fastest with the blockchain, you need P2P nodes sorted by latency relative to your server, for this purpose use the [get_p2p_nodes.sh](xprNode/get_p2p_nodes.sh) script by making it executable `chmod +x /opt/XPRTestNet/xprNode/get_p2p_nodes.sh` then run it `opt/XPRTestNet/xprNode/get_p2p_nodes.sh`.
 
   - > After that, a file `available_nodes.txt` will be created in the `/opt/XPRTestNet/xprNode` folder, in it you will find a sorted list of active p2p nodes that you need to copy to the `/opt/XPRTestNet/xprNode/config.ini` file after removing `p2p-peer-address = ...` lines if exist.
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM: `chain-state-db-size-mb = 16384`
